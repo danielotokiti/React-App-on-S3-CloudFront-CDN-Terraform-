@@ -1,0 +1,26 @@
+Terraform React Static Site (S3 + CloudFront)
+
+## Tasks Completed:
+- Initialized new React app using `npx create-react-app`
+- Built the production files using `npm run build`
+- Created an S3 bucket with static website hosting enabled (Terraform)
+- Synced the React build folder (`build/`) to the S3 bucket
+- Created CloudFront Distribution for CDN and HTTPS support
+- Attached an Origin Access Control (OAC) to restrict S3 access
+- Set CloudFront behavior to redirect all traffic to HTTPS
+- Disabled public access to S3 bucket; all access is through CloudFront
+- Used Terraform Remote Backend for state storage (S3 + DynamoDB)
+- Applied all infrastructure changes using Terraform
+- Verified website was live on CloudFront’s default domain
+
+## Screenshots:
+- React app using `npx create-react-app and the production files using `npm run build`
+- `s3.tf` showing S3 bucket config and static website setup
+- `cloudfront.tf` showing distribution, OAC, and HTTPS redirect
+- AWS S3 console: bucket with no public access and contents of `/build/`
+- AWS CloudFront console: distribution status and domain name
+- Live webpage with updated custom React content
+- Terminal output showing `terraform apply` success
+
+## Notes:
+- IAM user requires full access for S3 and cloudfront.
